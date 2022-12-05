@@ -45,14 +45,14 @@ public static void main(String[] args) {
         romanCheck = true;
         } else {
            System.out.println("Введите только арабские или римские числа");
-        }
+    }
         if ((numberInt1>=1)&&(numberInt1<=10)&&(numberInt2>=1)&&(numberInt2<=10)) {
         if (romanCheck == false) {
            System.out.println(valueRes(numberInt1, numberInt2, operation));
         } else {
            summ = valueRes(numberInt1, numberInt2, operation);
            System.out.println(arabicToRoman(summ));
-        }
+     }
         } else {
            System.out.println("Введите число от 1 до 10 включительно в формате : 1+2");
      }
@@ -71,9 +71,9 @@ public static boolean checkForRoman(String numS) {
  }
         if (sum1 == numS.length()) {
             roman = true;
-        }
+      }
             return roman;
-        }
+    }
 
 public static int valueRes(int num1, int num2, char operation) {
         int result = 0;
@@ -91,11 +91,9 @@ public static int valueRes(int num1, int num2, char operation) {
         case '/':
             result = num1 / num2;
         break;
-        }
-
-            return result;
-        }
-
+     }
+           return result;
+     }
 
 public static int romanToArabic(String input) {
         String romanNumeral = input.toUpperCase();
@@ -117,15 +115,15 @@ public static int romanToArabic(String input) {
 
         if (romanNumeral.length() > 0) {
         throw new IllegalArgumentException(input + " Невозможно преобразовать в римскую цифру");
-        }
+    }
 
         return result;
-        }
+    }
 
 public static String arabicToRoman(int number) {
         if ((number <= 0) || (number > 4000)) {
         throw new IllegalArgumentException(number + " находится вне диапазона(0,4000)");
-        }
+     }
 
         List<RomNum> romanNumerals = RomNum.getReverseSortedValues();
 
