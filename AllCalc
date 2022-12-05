@@ -55,8 +55,8 @@ public static void main(String[] args) {
         }
         } else {
            System.out.println("Введите число от 1 до 10 включительно в формате : 1+2");
-        }
-        }
+     }
+ }
 
 public static boolean checkForRoman(String numS) {
         boolean roman = false;
@@ -66,10 +66,9 @@ public static boolean checkForRoman(String numS) {
         for (int j = 0; j < array1.length; j++) {
         if (numS.charAt(i) == array1[j]) {
         sum1++;
-        }
-        }
-
-        }
+      }
+    }
+ }
         if (sum1 == numS.length()) {
             roman = true;
         }
@@ -113,8 +112,8 @@ public static int romanToArabic(String input) {
         romanNumeral = romanNumeral.substring(symbol.name().length());
         } else {
         i++;
-        }
-        }
+    }
+}
 
         if (romanNumeral.length() > 0) {
         throw new IllegalArgumentException(input + " Невозможно преобразовать в римскую цифру");
@@ -140,9 +139,9 @@ public static String arabicToRoman(int number) {
         number -= currentSymbol.getValue();
         } else {
         i++;
-        }
-        }
+    }
+ }
         return sb.toString();
-        }
-        }
+    }
+ }
 
